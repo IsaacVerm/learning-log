@@ -28,7 +28,16 @@ Create app: `python manage.py startapp app`
 
 Create tables: `python manage.py migrate`
 
-## Tricks
+## Tricks (09-03-2019)
 
 Get timezone with `sudo systemsetup -gettimezone`.
 
+## Handling multiple SSH keys
+
+Multiple keys available in `~/.ssh` but only one of those is loaded at one time.
+
+To load another key:
+
+* check available keys `ls id_rsa*`
+* remove all previous keys `ssh-add -D`
+* load new key `ssh-add KEY`
